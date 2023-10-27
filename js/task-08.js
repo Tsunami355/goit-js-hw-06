@@ -9,8 +9,10 @@ loginForm.addEventListener("submit", function (event) {
     formData.forEach((value, key) => {
         formObject[key] = value;
     });
+
     if (!formObject.email || !formObject.password) {
         alert("Всі поля повинні бути заповненні");
+        return;
     } else {
         console.log(formObject);
     }
